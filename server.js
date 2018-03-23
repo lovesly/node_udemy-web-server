@@ -4,7 +4,8 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const app = express();
-const port = 3001;
+// port set up for Heroku
+const port = process.env.PORT || 3001;
 
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 app.set('view engine', 'hbs');
