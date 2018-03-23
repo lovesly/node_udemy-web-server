@@ -47,6 +47,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Project Page',
+        text: 'some project text',
+        link: 'https://github.com/lovesly/node_udemy-web-server',
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send('<h1>Oops, shit happens.</h1>');
 });
