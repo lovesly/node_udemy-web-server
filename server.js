@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 app.set('view engine', 'hbs');
-// middle ware
+// middlewares
 // won't continue until calling next();
 app.use((req, res, next) => {
     const now = new Date().toString();
